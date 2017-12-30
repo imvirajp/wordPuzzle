@@ -1,0 +1,19 @@
+table {
+  margin-top: 100px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+td {
+  height: 70px;
+  width: 70px;
+  text-align: center;
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: lighter;
+  border: 1px solid black;
+}
+
+td:hover {
+  background-color: #CB3D1E;
+}
