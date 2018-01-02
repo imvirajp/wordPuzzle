@@ -1,4 +1,4 @@
-const Game = function(words){
-  this.words = words;
-  this.player = new Player(words);
+const Game = function(word) {
+  this.word = word;
+  this.player = new Player(word);
 }

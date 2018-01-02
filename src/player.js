@@ -1,3 +1,3 @@
-const Player = function(words){
-  this.words = words;
+const Player = function(word){
+  this.word = word;
 }

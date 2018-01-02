@@ -1,5 +1,4 @@
 table {
-  margin-top: 100px;
   border: 1px solid black;
   border-collapse: collapse;
 }
@@ -14,6 +13,21 @@ td {
   border: 1px solid black;
 }
 
-td:hover {
+#boardDiv td:hover {
   background-color: #CB3D1E;
+}
+
+#container {
+  margin-top: 40px;
+}
+
+#boardDiv {
+  margin-left: 300px;
+  width: 600px;
+  float: left;
+}
+
+#wordsDiv td {
+  height: 48px;
+  width: 150px;
 }

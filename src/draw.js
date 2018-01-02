@@ -18,7 +18,7 @@ const generateRow = function(table) {
   table.appendChild(row);
 }
 
-const fillBoard = function(){
+const fillBoard = function() {
   let usedLetters = [];
   let letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
   for (let i = 1; i < 50; i++) {
@@ -30,4 +30,17 @@ const fillBoard = function(){
     }
     i--;
   }
+}
+
+const generateWordTable = function(wordList) {
+  let table = document.getElementById('words');
+  for (let i = 0; i < 10; i++) {
+    let row = document.createElement('tr');
+    let cell = document.createElement('td');
+    cell.id = i;
+    cell.innerText = wordList[i];
+    table.appendChild(row);
+    row.appendChild(cell);
+  }
+  return table;
 }
