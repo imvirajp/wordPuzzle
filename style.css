@@ -31,3 +31,11 @@ td {
   height: 48px;
   width: 150px;
 }
+
+#startButton {
+  margin-left: 650px;
+  margin-top: 20px;
+  font-size: 40px;
+  shape-outside: border-box;
+  background-color: white;
+}

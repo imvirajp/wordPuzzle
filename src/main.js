@@ -1,10 +1,16 @@
 const startGame = function(){
-  generateTable();
   fillBoard();
   let words = getWords();
-  generateWordTable(words);
+  fillWordTable(words);
   let word = getWord(words);
   let game = new Game(word);
+}
+
+const loadGame = function(){
+  generateTable();
+  generateWordTable();
+  let startButton = document.getElementById('startButton');
+  startButton.onclick = () => {startGame()};
 }
 
 const getWord = function(words){

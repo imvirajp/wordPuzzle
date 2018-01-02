@@ -32,15 +32,26 @@ const fillBoard = function() {
   }
 }
 
-const generateWordTable = function(wordList) {
+const generateWordTable = function() {
   let table = document.getElementById('words');
   for (let i = 0; i < 10; i++) {
-    let row = document.createElement('tr');
-    let cell = document.createElement('td');
-    cell.id = i;
-    cell.innerText = wordList[i];
-    table.appendChild(row);
-    row.appendChild(cell);
+    generateWordRow(table, i);
   }
   return table;
+}
+
+const generateWordRow = function(table, index) {
+  let row = document.createElement('tr');
+  let cell = document.createElement('td');
+  row.id = index;
+  cell.id = index;
+  table.appendChild(row);
+  row.appendChild(cell);
+}
+
+const fillWordTable = function(wordList) {
+  let table = document.getElementById('words');
+  for (let i = 0; i < wordList.length; i++) {
+    table.getElementsByTagName('td')[i].innerText = wordList[i];
+  }
 }
