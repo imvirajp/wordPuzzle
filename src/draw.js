@@ -19,13 +19,13 @@ const generateRow = function(table) {
 }
 
 const fillBoard = function(){
-  let records = [];
+  let usedLetters = [];
   let letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
   for (let i = 1; i < 50; i++) {
     let index = Math.floor(Math.random() * letters.length);
-    if (!records.includes(letters[index]) || records.length > 25) {
+    if (!usedLetters.includes(letters[index]) || usedLetters.length > 25) {
       document.getElementById(i).innerText = letters[index];
-      records.push(letters[index]);
+      usedLetters.push(letters[index]);
       i++;
     }
     i--;
