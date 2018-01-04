@@ -1,14 +1,21 @@
-const hasPressedCorrectWord = function(game){
+const hasPressedValidLetter = function(game) {
   let board = document.getElementById('board');
   board.onclick = (event) => {
     let key = event.target.innerText;
-    console.log(key);
     game.addPlayerLetter(key);
-    hasPressedValidLetter(game);
+    isValidLetter(game);
   }
 }
 
-const hasPressedValidLetter = function(game){
-  if(game.hasPressedCorrectLetter()) game.increaseIndex();
-  else alert("you lost");
+const isValidLetter = function(game) {
+  if (game.hasPressedCorrectLetter()) {
+    game.addPressedKey();
+    console.log(game.keyPressed);
+    game.increaseLetterIndex();
+  } else alert('you lost');
+}
+
+const isValidWord = function(game) {
+  if (game.hasPressedCorrectWord()) game.increaseWordIndex();
+  else alert('you lost');
 }

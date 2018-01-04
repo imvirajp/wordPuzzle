@@ -24,7 +24,7 @@ td {
 }
 
 #boardDiv td:hover {
-  background-color: #CB3D1E;
+  background-color: #f6a7a0;
 }
 
 #wordsDiv td {
@@ -33,7 +33,7 @@ td {
 }
 
 #wordsDiv td:hover {
-  background-color: #3b4bbeb5;
+  background-color: #7a8fefb5;
 }
 
 #startButton {
