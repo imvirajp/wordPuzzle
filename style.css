@@ -13,10 +13,6 @@ td {
   border: 1px solid black;
 }
 
-#boardDiv td:hover {
-  background-color: #CB3D1E;
-}
-
 #container {
   margin-top: 40px;
 }
@@ -27,9 +23,17 @@ td {
   float: left;
 }
 
+#boardDiv td:hover {
+  background-color: #CB3D1E;
+}
+
 #wordsDiv td {
   height: 48px;
   width: 150px;
+}
+
+#wordsDiv td:hover {
+  background-color: #3b4bbeb5;
 }
 
 #startButton {
